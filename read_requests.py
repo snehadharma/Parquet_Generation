@@ -1,5 +1,6 @@
 # test_api.py
 import requests
+import pandas as pd
 
 BASE_URL = "http://localhost:8000"
 
@@ -22,6 +23,14 @@ def test_api():
         response = requests.get(f"{BASE_URL}/api/v1/equipment/{first_id}")
         print(f"\nSingle equipment endpoint test (ID: {first_id}):")
         print(response.json())
+
+    create_parquet_file(data)
+
+def create_parquet_file(data):
+    df = pd.DataFrame(data)
+    df.to_parquet('./equipment_list.parquet')
+
+    print(df)
 
 if __name__ == "__main__":
     test_api()
