@@ -6,6 +6,9 @@ import json
 import uvicorn
 from datetime import datetime
 
+# import data model
+from models import Equipment
+
 # Constants
 CURRENT_TIME = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")
 CURRENT_USER = "snehadharma"
@@ -26,42 +29,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-# Data Models
-class EquipmentType(BaseModel):
-    Caption: str
-    DateCreated: str
-    DateModified: str
-    Deleted: bool
-    Id: int
-    Index: int
-    Value: str
-
-class Metadata(BaseModel):
-    file_path: str
-    file_name: str
-    file_size: str
-    file_modification_time: str
-
-class Equipment(BaseModel):
-    Active: bool
-    BuiltDate: str
-    DateCreated: str
-    DateModified: str
-    Deleted: bool
-    EquipmentName: str
-    EquipmentType: EquipmentType
-    Id: int
-    OperatingCompany: str
-    Owner: str
-    ResourceNumber: str
-    _metadata: Metadata
-
-class EquipmentResponse(BaseModel):
-    timestamp: str
-    user: str
-    total_records: int
-    data: List[Equipment]
 
 # Load JSON Data
 def load_equipment_data():
@@ -120,22 +87,12 @@ async def get_equipment_by_id(equipment_id: int):
 
 # Run the application
 if __name__ == "__main__":
-    print(f"Current Date and Time (UTC): {CURRENT_TIME}")
-    print(f"Current User's Login: {CURRENT_USER}")
-    print("-" * 80)
-    
     print("Starting FastAPI server...")
     
-    # Print API information
-    print("\nAPI Information:")
-    print(f"- Server: http://localhost:8000")
-    print(f"- Swagger UI: http://localhost:8000/docs")
-    print(f"- ReDoc: http://localhost:8000/redoc")
-    
     print("\nAvailable Endpoints:")
-    print("1. Root: /")
-    print("2. All Equipment: /api/v1/equipment")
-    print("3. Equipment by ID: /api/v1/equipment/{id}")
+    print("1. Root: http://localhost:8000/")
+    print("2. All Equipment: http://localhost:8000/api/v1/equipment")
+    print("3. Equipment by ID: http://localhost:8000/api/v1/equipment/{id}")
     
     # Run the server
     uvicorn.run(app, host="0.0.0.0", port=8000)
