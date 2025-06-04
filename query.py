@@ -103,7 +103,7 @@ async def get_equipment_by_id(equipment_id: int):
     """Get a specific equipment record by ID"""
     try:
         equipment = next(
-            (item for item in equipment_data if item["Id"] == equipment_id),
+            (item for item in equipment_data if item.Id == equipment_id),
             None
         )
         if equipment:

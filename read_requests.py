@@ -13,11 +13,12 @@ def test_api():
     response = requests.get(f"{BASE_URL}/api/v1/equipment")
     data = response.json()
     print(f"\nAll equipment endpoint test:")
-    print(f"Total records: {data['total_records']}")
+    print(f"{data}\n")
+    print(type(data))
     
-    if data['data']:
+    if data:
         # Test single equipment endpoint
-        first_id = data['data'][0]['Id']
+        first_id = data[0].get("Id")
         response = requests.get(f"{BASE_URL}/api/v1/equipment/{first_id}")
         print(f"\nSingle equipment endpoint test (ID: {first_id}):")
         print(response.json())
