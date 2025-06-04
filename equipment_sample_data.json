@@ -1,0 +1,107 @@
+[
+  {
+    "Active": true,
+    "BuiltDate": "2024-01-15",
+    "DateCreated": "2024-01-15T09:00:00",
+    "DateModified": "2025-06-04T15:52:51",
+    "Deleted": false,
+    "EquipmentName": "Pressure Valve A123",
+    "EquipmentType": {
+      "Caption": "Valve",
+      "DateCreated": "2024-01-01T00:00:00",
+      "DateModified": "2024-01-01T00:00:00",
+      "Deleted": false,
+      "Id": 1,
+      "Index": 1,
+      "Value": "pressure_valve"
+    },
+    "Id": 1001,
+    "OperatingCompany": "KMT Operations",
+    "Owner": "snehadharma",
+    "ResourceNumber": "RN-001"
+  },
+  {
+    "Active": true,
+    "BuiltDate": "2024-02-20",
+    "DateCreated": "2024-02-20T10:30:00",
+    "DateModified": "2025-06-04T15:52:51",
+    "Deleted": false,
+    "EquipmentName": "Pump Station B456",
+    "EquipmentType": {
+      "Caption": "Pump",
+      "DateCreated": "2024-01-01T00:00:00",
+      "DateModified": "2024-01-01T00:00:00",
+      "Deleted": false,
+      "Id": 2,
+      "Index": 2,
+      "Value": "pump_station"
+    },
+    "Id": 1002,
+    "OperatingCompany": "KMT Operations",
+    "Owner": "snehadharma",
+    "ResourceNumber": "RN-002"
+  },
+  {
+    "Active": false,
+    "BuiltDate": "2023-12-10",
+    "DateCreated": "2023-12-10T14:15:00",
+    "DateModified": "2025-06-04T15:52:51",
+    "Deleted": true,
+    "EquipmentName": "Control Panel C789",
+    "EquipmentType": {
+      "Caption": "Control Panel",
+      "DateCreated": "2024-01-01T00:00:00",
+      "DateModified": "2024-01-01T00:00:00",
+      "Deleted": false,
+      "Id": 3,
+      "Index": 3,
+      "Value": "control_panel"
+    },
+    "Id": 1003,
+    "OperatingCompany": "KMT Operations",
+    "Owner": "snehadharma",
+    "ResourceNumber": "RN-003"
+  },
+  {
+    "Active": true,
+    "BuiltDate": "2024-03-05",
+    "DateCreated": "2024-03-05T11:45:00",
+    "DateModified": "2025-06-04T15:52:51",
+    "Deleted": false,
+    "EquipmentName": "Sensor Array D012",
+    "EquipmentType": {
+      "Caption": "Sensor",
+      "DateCreated": "2024-01-01T00:00:00",
+      "DateModified": "2024-01-01T00:00:00",
+      "Deleted": false,
+      "Id": 4,
+      "Index": 4,
+      "Value": "sensor_array"
+    },
+    "Id": 1004,
+    "OperatingCompany": "KMT Operations",
+    "Owner": "snehadharma",
+    "ResourceNumber": "RN-004"
+  },
+  {
+    "Active": true,
+    "BuiltDate": "2024-04-18",
+    "DateCreated": "2024-04-18T13:20:00",
+    "DateModified": "2025-06-04T15:52:51",
+    "Deleted": false,
+    "EquipmentName": "Filter Unit E345",
+    "EquipmentType": {
+      "Caption": "Filter",
+      "DateCreated": "2024-01-01T00:00:00",
+      "DateModified": "2024-01-01T00:00:00",
+      "Deleted": false,
+      "Id": 5,
+      "Index": 5,
+      "Value": "filter_unit"
+    },
+    "Id": 1005,
+    "OperatingCompany": "KMT Operations",
+    "Owner": "snehadharma",
+    "ResourceNumber": "RN-005"
+  }
+]
