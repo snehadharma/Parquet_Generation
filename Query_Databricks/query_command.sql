@@ -1,0 +1,1 @@
+SELECT * FROM kmt_sneha_dev.stores.equipment_sample_data
