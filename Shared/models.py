@@ -1,10 +1,11 @@
 from pydantic import BaseModel
+from datetime import datetime
 
 # Data Models
 class EquipmentType(BaseModel):
     Caption: str
-    DateCreated: str
-    DateModified: str
+    DateCreated: datetime
+    DateModified: datetime
     Deleted: bool
     Id: int
     Index: int
@@ -20,9 +21,9 @@ class Equipment(BaseModel):
     # def __init__(self): 
     #     pass
     Active: bool
-    BuiltDate: str
-    DateCreated: str
-    DateModified: str
+    BuiltDate: datetime
+    DateCreated: datetime
+    DateModified: datetime
     Deleted: bool
     EquipmentName: str
     EquipmentType: EquipmentType

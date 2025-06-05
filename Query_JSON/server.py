@@ -18,9 +18,6 @@ if parent_dir not in sys.path:
 # Now you can import from Shared
 from Shared.models import Equipment
 
-# import data model
-from Shared.models import Equipment
-
 # Constants
 CURRENT_TIME = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")
 CURRENT_USER = "snehadharma"
@@ -43,6 +40,7 @@ app.add_middleware(
 )
 
 # Load JSON Data
+# @cache 
 def load_equipment_data():
     try:
         with open(JSON_FILE_PATH, 'r') as file:

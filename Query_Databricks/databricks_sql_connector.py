@@ -37,6 +37,8 @@ try:
     
     # Get column names
     columns = [desc[0] for desc in cursor.description]
+
+    print(type(result))
     
     # Print column headers
     print("\nColumns:")
@@ -44,8 +46,9 @@ try:
     
     # Print results
     print("\nResults:")
-    for row in result:
-        print(row)
+    print(result)
+    # for row in result:
+    #     print(row)
 
 except Exception as e:
     print(f"Error: {e}")
