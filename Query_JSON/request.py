@@ -28,7 +28,8 @@ def test_api():
 
 def create_parquet_file(data):
     df = pd.DataFrame(data)
-    df.to_parquet('./equipment_list.parquet')
+    current_dir = os.path.dirname(os.path.abspath(__file__)) + '\equipment_list.parquet'
+    df.to_parquet(current_dir)
 
     print(df)
 
