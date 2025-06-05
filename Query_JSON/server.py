@@ -4,10 +4,22 @@ from pydantic import BaseModel
 from typing import List, Optional
 import json
 import uvicorn
+import os
 from datetime import datetime
+import sys 
+
+# Get the parent directory (project_root)
+parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+
+# Add parent directory to Python path
+if parent_dir not in sys.path:
+    sys.path.append(parent_dir)
+
+# Now you can import from Shared
+from Shared.models import Equipment
 
 # import data model
-from models import Equipment
+from Shared.models import Equipment
 
 # Constants
 CURRENT_TIME = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")

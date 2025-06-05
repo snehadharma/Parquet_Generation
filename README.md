@@ -6,6 +6,11 @@ Creating a custom API wrapping around queries to different platforms. Our goal i
 
 The first method of querying data we employ is simply grabbing data from a JSON file. We transform this data to follow a pydantic BaseModel for more structured and uniform accesses. We store this data in a cache to reduce storage strains on the FastAPI server. 
 
+Run this method by: 
+* Navigating to the Query_JSON folder
+* Running the `python server.py` command
+* Opening a different terminal and running the `python make_requests.py` command
+
 ## Method 2 
 
 The second method of querying data we employ is using databricks. There are two ways we do this, using the Databricks Queries API and using the Databricks SQL connector. We then wrap a FastAPI around these calls so we cna make requests to this custom API. 

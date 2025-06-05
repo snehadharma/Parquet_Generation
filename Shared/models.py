@@ -17,6 +17,8 @@ class Metadata(BaseModel):
     file_modification_time: str
 
 class Equipment(BaseModel):
+    # def __init__(self): 
+    #     pass
     Active: bool
     BuiltDate: str
     DateCreated: str
