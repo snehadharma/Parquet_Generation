@@ -1,4 +1,4 @@
-# Parquet_Generation
+# Parquet Generation
 
 Creating a custom API wrapping around queries to different platforms. Our goal is to be able to make requests to this custom API and transform the data we receive into parquet files. 
 
