@@ -1,3 +1,5 @@
+# USING DATABRICKS SQL CONNECTOR 
+
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
@@ -21,9 +23,6 @@ if parent_dir not in sys.path:
 
 # Now you can import from Shared
 from Shared.models import Equipment
-
-
-
 
 
 # Constants
@@ -73,7 +72,6 @@ def convert_databricks_results_to_equipment(results: dict) -> List[Equipment]:
         equipment = Equipment.model_validate(equipment_dict)
         equipment_list.append(equipment)
     
-    print(equipment_list)
     return equipment_list
 
 def load_equipment_data_queries_api():
@@ -113,11 +111,6 @@ def load_equipment_data_queries_api():
         
         # Get the results
         results = response.json()
-        
-        # # Print the results in a readable format
-        print("\nQuery Results:")
-        print(results)
-        # print(json.dumps(results, indent=2))
         
         return convert_databricks_results_to_equipment(results=results)
         

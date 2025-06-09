@@ -1,6 +1,7 @@
 # test_api.py
 import requests
 import pandas as pd
+import os 
 
 BASE_URL = "http://localhost:8000"
 
