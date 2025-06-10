@@ -39,7 +39,7 @@ def blob_upload(sourceFileToUpload, container, targetFilePath):
 # df = pd.read_parquet(get_parquet_path())
 # print(df)
 
-blob_upload(get_parquet_path(), container="dropzone", targetFilePath="elt_v2_dropzone/dev/kmt_sneha/source_data/equipment_list.parquet")
+blob_upload(get_parquet_path(), container="dropzone", targetFilePath=os.getenv("TARGET_PATH"))
 
 # need target file path to upload parquet files to, 
 # need tenant id, client id, client secret <- credentials , account url for blob service 
