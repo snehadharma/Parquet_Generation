@@ -3,8 +3,11 @@ from azure.storage.blob import BlobServiceClient
 from azure.identity import ClientSecretCredential
 from pathlib import Path
 import os
+import pandas as pd
+from dotenv import load_dotenv
 
-print(os.getenv('DATABRICKS_TOKEN'))
+load_dotenv()
+
 
 def get_parquet_path():
     # Get path to hi.txt
@@ -26,7 +29,6 @@ def blob_upload(sourceFileToUpload, container, targetFilePath):
    account_url = os.getenv("ACCOUNT_URL")
    creds = auth_active_directory()
 
-
    blob_service_client = BlobServiceClient(account_url, credential=creds)
    blob_client = blob_service_client.get_blob_client(container=container, blob=targetFilePath)
 
@@ -34,8 +36,10 @@ def blob_upload(sourceFileToUpload, container, targetFilePath):
    with open(file=sourceFileToUpload, mode="rb") as data:
       blob_client.upload_blob(data, overwrite=True)
 
-FILE_PATH = get_parquet_path()
-# blob_upload(FILE_PATH, container="dropzone", targetFilePath="elt_v2_dropzone/dev/kmt_sneha/source_data")
+# df = pd.read_parquet(get_parquet_path())
+# print(df)
+
+blob_upload(get_parquet_path(), container="dropzone", targetFilePath="elt_v2_dropzone/dev/kmt_sneha/source_data/equipment_list.parquet")
 
 # need target file path to upload parquet files to, 
 # need tenant id, client id, client secret <- credentials , account url for blob service 

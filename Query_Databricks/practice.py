@@ -13,5 +13,11 @@ def read_sql_query(filename: str) -> str:
         return sql_file.read()
 
 # Usage in your code:
-query = read_sql_query('get_all_equipment.sql')
-print(query)
+# query = read_sql_query('get_all_equipment.sql')
+# print(query)
+
+def get_env():
+    print(os.getenv('DATABRICKS_TOKEN'))
+
+
+get_env()

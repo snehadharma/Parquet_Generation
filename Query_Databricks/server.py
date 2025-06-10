@@ -190,11 +190,13 @@ async def get_all_equipment():
 
 # Run the application
 if __name__ == "__main__":
-    print("Starting FastAPI server...")
+    # print("Starting FastAPI server...")
     
-    print("\nAvailable Endpoints:")
-    print("1. Root: http://localhost:8000/")
-    print("2. All Equipment: http://localhost:8000/api/v1/equipment")
+    # print("\nAvailable Endpoints:")
+    # print("1. Root: http://localhost:8000/")
+    # print("2. All Equipment: http://localhost:8000/api/v1/equipment")
     
-    # Run the server
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    # # Run the server
+    # uvicorn.run(app, host="0.0.0.0", port=8000)
+
+    print(os.getenv('DATABRICKS_TOKEN'))
